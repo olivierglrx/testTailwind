@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 const { data: publications } = await useFetch(
-  "http://olivierglorieux.fr/wp-json/wp/v2/publications?acf_format=standard"
+  "https://olivierglorieux.fr/wp-json/wp/v2/publications?acf_format=standard"
 );
 </script>
 
