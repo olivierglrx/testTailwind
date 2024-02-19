@@ -4,11 +4,11 @@
 
   <div class="flex flex-wrap">
     <div class="col" v-for="publi in publications">
-    
+
       <Card
         :title="publi.title.rendered"
         :authors="publi.Authors"
-        :imageURL="publi.acf.image.url"
+        :imageURL="publi.acf.image.url.replace(/^http:/, 'https:')"
         :fields="publi.Field"
         :abstract="publi.acf.abstract"
         :articleURL="publi.acf.url"

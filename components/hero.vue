@@ -12,7 +12,7 @@
 #container {
   margin-top: 20%;
   margin-bottom: 25%;
- margin-left: 25%; 
+ margin-left: 5%; 
 
   display: flex;
 

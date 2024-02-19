@@ -1,5 +1,5 @@
 <template>
-  <div class="block max-w-xs m-4  p-6 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 ">
+  <div class="block max-w-xs m-4  px-2 py-4 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 ">
     <div class="grid gap-4 place-items-center h-36">
         <img :src="imageURL" class="h-full"  />
   
