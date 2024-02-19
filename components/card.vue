@@ -1,30 +1,52 @@
 <template>
-  <div class="card" style="width: 30rem; padding: 1rem">
-    <img :src="imageURL" width="100px" class="card-img-top" />
-    <div class="card-body">
-      <h5 class="card-title">{{ title }}</h5>
-      <ul>
-        <li v-for="author in authors">{{ author.name }}</li>
-      </ul>
-      <ul v-if="field">
-        <li v-for="field in fields">{{ field.name }}</li>
-      </ul>
+  <div class="block max-w-sm mx-8 p-6 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 " style="width: 30rem; padding: 1rem">
+    <div class="grid grid-cols-1 gap-4 place-items-center h-36">
+        <img :src="imageURL" class="h-full"  />
+  
+    </div>
+    <div class="">
+      <h3 class="max-w-sm p-6 uppercase">
+        {{ title }}</h3>
 
-      <a :href="articleURL" class="btn btn-primary">See ArXiv</a>
+      <div v-if="fields" class="mb-2">
+        
+          <UButton color="white" v-for="field in fields" class="hover:bg-gray-100 rounded-full">
+          {{ field.name }}
+          </UButton>      
+        
+        </div>
+
+        <div>
+              <span v-for="(author, index) in authors" :key="author.term_id" class="italic">{{ index<authors.length-1 ? author.name+', ' : author.name+'.' }}</span>
+        </div>
+
+<div class="flex space-x-4 my-4">
+
+      <a :href="articleURL">
+        <UButton color="white" class="hover:bg-gray-100">Arxiv <Icon name="bi:file-earmark-pdf">  </Icon> </UButton>
+      </a>
 
       <UPopover overlay>
-        <UButton color="white" label="Abstract" />
+        <UButton color="white" class="hover:bg-gray-100" label="Abstract" />
 
-        <template #panel width="100px">
-          <div>
-            <Placeholder width="100px" />
-            <p width="10px">{{ abstract }}</p>
+        <template #panel>
+          <div class="w-96 rounded-full mx-auto">
+            <Placeholder/>
+            <p class="p-5 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-700">
+              {{ abstract }}</p>
           </div>
         </template>
       </UPopover>
     </div>
   </div>
+
+</div>
+
+
+
+
 </template>
+
 
 <script setup>
 defineProps({
@@ -36,3 +58,8 @@ defineProps({
   articleURL: String,
 });
 </script>
+<style scoped>
+.fit {
+  width:"fit-content"; 
+}
+</style>

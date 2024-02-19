@@ -29,7 +29,7 @@
           </ul>
           
         </div>
-        <div><ColorMode /> </div>
+        <div><ColorModeTailwind/> </div>
   
         <!-- Dark Background Transition -->
         <transition
