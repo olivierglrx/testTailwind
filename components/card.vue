@@ -1,11 +1,11 @@
 <template>
-  <div class="block max-w-sm mx-8 p-6 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 " style="width: 30rem; padding: 1rem">
-    <div class="grid grid-cols-1 gap-4 place-items-center h-36">
+  <div class="block max-w-xs m-4  p-6 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 ">
+    <div class="grid gap-4 place-items-center h-36">
         <img :src="imageURL" class="h-full"  />
   
     </div>
     <div class="">
-      <h3 class="max-w-sm p-6 uppercase">
+      <h3 class="max-w-xs p-6 md:uppercase">
         {{ title }}</h3>
 
       <div v-if="fields" class="mb-2">
