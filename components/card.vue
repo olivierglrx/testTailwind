@@ -1,8 +1,8 @@
 <template>
   <div class="block max-w-xs m-4  px-2 py-4 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 ">
-   {{ imageURL }}
-    <div class="grid gap-4 place-items-center h-36">
-        <img :src="imageURL" class="h-full"  />
+
+    <div class="grid place-items-center">
+        <img :src="imageURL" class="h-3/4"  />
   
     </div>
     <div class="">
@@ -31,7 +31,7 @@
         <UButton color="white" class="hover:bg-gray-100" label="Abstract" />
 
         <template #panel>
-          <div class="w-96 rounded-full mx-auto">
+          <div class="max-w-xs rounded-full mx-auto">
             <Placeholder/>
             <p class="p-5 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-700">
               {{ abstract }}</p>
