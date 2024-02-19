@@ -1,64 +1,36 @@
 <template>
-  <!-- <div>
-  
-    <select v-model="$colorMode.preference">
-      <option value="system">System</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-      <option value="sepia">Sepia</option>
-    </select>
-  </div> -->
-
   <div>
-    <input type="checkbox" class="checkbox" id="checkbox"  :value="checked" @click='toggle'/>
+
+  </div>
+    <div>
+    <input type="checkbox" class="checkbox" id="checkbox"  v-model="checked" @click="toggle" />
     <label for="checkbox" class="checkbox-label">
-      <Icon id="sun" name="mdi:white-balance-sunny" />
       <Icon id="moon" name="material-symbols:nightlight" />
+      <Icon id="sun" name="mdi:white-balance-sunny" />
+
       <span class="ball"></span>
     </label>
    
   </div>
 </template>
 
+
 <script setup>
-const colorMode = useColorMode();
-console.log(colorMode.value)
-var checked=true;
-if(colorMode.value=="dark"){
-  checked = true;
-  console.log(colorMode.value)
-}
-else{
-  checked = false;
-  console.log(colorMode.value)
-}
-
+const colorMode = useColorMode()
+const checked=ref(colorMode.preference=='dark')
 function toggle(){
-
-  if(checked){
-    colorMode.preference="light";
-  }
-  else{
-    colorMode.preference="dark";
-  }
-
-  checked=!checked
+  if(checked.value){
+ colorMode.preference='light';
 }
-
+  else{
+    colorMode.preference='dark'
+  }
+}
 </script>
 
-<style>
+<style lang="postcss">
 body {
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.8);
-}
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-.sepia-mode body {
-  background-color: #f1e7d0;
-  color: #433422;
+  @apply min-h-screen bg-white dark:bg-gray-800 dark:text-gray-200;
 }
 
 .checkbox {
@@ -121,4 +93,6 @@ body {
 .support a:hover {
   transform: scale(1.1);
 }
+
+
 </style>
