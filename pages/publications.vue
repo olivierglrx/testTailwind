@@ -1,6 +1,5 @@
 <template>
-  <div class='h-full w-full border' :style="{ backgroundImage: `url(${backgroundUrl})` }" style=" background-size: cover;
-">
+
 
 
     <h1
@@ -8,7 +7,8 @@
     >
       Publications
     </h1>
-
+    <div class='h-full w-full border' :style="{ backgroundImage: `url(${backgroundUrl})` }" style=" background-size: cover;
+">
     <div class="container justify-around flex-wrap">
       <div v-for="publi in publications">
         <PersoCard1

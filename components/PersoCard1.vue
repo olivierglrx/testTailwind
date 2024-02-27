@@ -1,17 +1,19 @@
 <template>
-  <div class="card mt-6 max-w-96 min-h-80 m-6 bg-white">
+  <div class="card mt-6 max-w-96 min-h-80 m-2 bg-white">
   <div class="flex justify-around mt-6">
-    <img :src="imageURL" width="100px" class="card-img-top hover:scale-125 transition duration-500 cursor-pointer" />
+    <img :src="imageURL" width="100px" class="card-img-top hover:scale-110 transition duration-500 cursor-pointer" />
   </div>
+
     <div class="card-body p-2">
-      <h5 class="py-8">{{ title }}</h5>
-      <ul>
+      <div v-if="fields">
+        <UBadge  color="white" class="m-1  hover:scale-110 transition duration-500 cursor-pointer" v-for="field in fields" @click='printBadge(field.name)'>{{ field.name }}</UBadge>
+      </div>
+      <h5 class="py-6">{{ title }}</h5>
+      
         <!-- <li v-for="author in authors">{{ author.name }}</li> -->
-        <UAvatar  v-for="author in authors" :alt="author.name" size="sm" style='border:1px solid black'/>
-      </ul>
-      <ul v-if="field">
-        <li v-for="field in fields">{{ field.name }}</li>
-      </ul>
+        <!-- <UAvatar   v-for="author in authors" :alt="author.name" size="sm" style='border:1px solid black'/> -->
+      
+
       
       <Panel header="Abstract" toggleable collapsed>
         <p>
@@ -54,4 +56,9 @@ defineProps({
 
 import Button from 'primevue/button';
 import Panel from "primevue/panel";
+
+
+function printBadge(item){
+  console.log(item)
+}
 </script>
