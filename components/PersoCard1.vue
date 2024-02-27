@@ -11,7 +11,7 @@
       <h5 class="py-6">{{ title }}</h5>
       
         <!-- <li v-for="author in authors">{{ author.name }}</li> -->
-        <!-- <UAvatar   v-for="author in authors" :alt="author.name" size="sm" style='border:1px solid black'/> -->
+        <UAvatar   v-for="author in authors" :alt="author.name" size="sm" style='border:1px solid black'/>
       
 
       
