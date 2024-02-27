@@ -1,10 +1,10 @@
 <template>
-  <div class="card" style="width: 30rem; padding: 1rem">
-  <div class="flex justify-around">
-    <img :src="imageURL" width="100px" class="card-img-top" />
+  <div class="card mt-6 max-w-96 min-h-80 m-6 bg-white">
+  <div class="flex justify-around mt-6">
+    <img :src="imageURL" width="100px" class="card-img-top hover:scale-125 transition duration-500 cursor-pointer" />
   </div>
-    <div class="card-body">
-      <h5 class="card-title">{{ title }}</h5>
+    <div class="card-body p-2">
+      <h5 class="py-8">{{ title }}</h5>
       <ul>
         <!-- <li v-for="author in authors">{{ author.name }}</li> -->
         <UAvatar  v-for="author in authors" :alt="author.name" size="sm" style='border:1px solid black'/>
@@ -14,14 +14,19 @@
       </ul>
       
       <Panel header="Abstract" toggleable collapsed>
-        <p class="m-0">
+        <p>
           {{ abstract }}
         </p>
       </Panel>
-
-      <NuxtLink :href="articleURL" class="btn btn-primary">
+      
+      <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+        <NuxtLink :href="articleURL" class="btn btn-primary">
         <Button label="See ArXiv"
-      /></NuxtLink>
+      /></NuxtLink>  
+      
+      </button>
+
+
 <!-- 
       <UPopover overlay>
         <UButton color="white" label="Abstract" />

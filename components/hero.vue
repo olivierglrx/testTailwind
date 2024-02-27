@@ -1,5 +1,8 @@
 <template>
-  <div id="container">
+  <div id="container" >
+ 
+    <img src="/wallpaper.png"  style="border-radius: 50%;" class="mb-10 " alt="Discover Nuxt 3" />
+
     <!-- <div class="center"> -->
         <!-- <img class="align-bottom" src="">  -->
         <p> Je suis Sébastien Martineau, 
@@ -11,10 +14,13 @@
 <style scoped>
 #container {
   margin-top: 20%;
-  margin-bottom: 25%;
- margin-left: 25%; 
+  /* margin-bottom: 25%; */
+ margin-left: 5%; 
 
   display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
 
 }
 

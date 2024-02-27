@@ -1,5 +1,5 @@
 <template>
   <Navbar-Tailwind />
   <slot />
-  <Footer/>
+  <!-- <Footer/> -->
 </template>
