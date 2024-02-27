@@ -1,5 +1,5 @@
 <template>
-  <div class='h-screen w-full border' :style="{ backgroundImage: `url(${backgroundUrl})` }" style=" background-size: cover;
+  <div class='h-full w-full border' :style="{ backgroundImage: `url(${backgroundUrl})` }" style=" background-size: cover;
 ">
 
 
@@ -21,6 +21,8 @@
           :articleURL="publi.acf.url"
         />
       </div>
+
+
     </div>
   </div>
 </template>
