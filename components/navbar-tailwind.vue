@@ -22,7 +22,7 @@
         <div class="hidden md:block">
           <ul class="flex space-x-8 text-sm font-sans">
 
-            <li><a href="\" class="active border-b-2 border-blue-500 pb-1">Home</a></li>
+            <li><a href="\" class="">Home</a></li>
             <li><a href="\about" class="">About</a></li>
             <li><a href="\publications" class="">Publications</a></li>
             
